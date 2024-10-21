@@ -11,10 +11,14 @@ export const Main = () => {
   const [id, setId] = useState(0);
 
   const newAdvice = () => {
-    axios.get("https://api.adviceslip.com/advice").then((res) => {
-      setAdvice(res.data.slip.advice);
-      setId(res.data.slip.id);
-    });
+    axios
+      .get(
+        `https://api.adviceslip.com/advice?timestamp=${new Date().getTime()}`
+      )
+      .then((res) => {
+        setAdvice(res.data.slip.advice);
+        setId(res.data.slip.id);
+      });
   };
 
   useEffect(() => {
