@@ -28,7 +28,7 @@ export const Main = () => {
           ADVICE #{id}
         </p>
         <div className="md:w-[444px] md:h-[114px]">
-          <h1 className="md:text-[28px] m-3 text-[24px] text-[#CEE3E9]">
+          <h1 className="md:text-[28px] font-bold m-3 text-[24px] text-[#CEE3E9]">
             {advice}
           </h1>
         </div>
